@@ -1,0 +1,18 @@
+<div class='container2'> <!-- entire post -->
+<div class='row'> <!-- row with title, author, thumbail -->
+  <h2>{{smith.title}}</h2>
+  <span class="author">Posted by: {{smith.author}}</span>
+</div>
+
+<div class='row'>
+  <img class="icon" ng-src="{{smith.image.path}}" alt="{{smith.image.alt}}">
+</div>
+
+<div class='row'> <!-- row with content and comments -->
+  <p class='eight columns'>{{smith.text}}</p>
+  <ul class='four columns'>
+    <li ng-repeat="comment in smith.comments">{{comment}}</li> <!--using smith.comments because we need a comment from the array-->
+  </ul>
+
+</div>
+</div>
